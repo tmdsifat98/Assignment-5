@@ -58,9 +58,11 @@ const day = todayDate.getDate();
 const year = todayDate.getFullYear();
 document.getElementById("day-month-year").innerText =
   nameOfMonth[month] + " " + day + " " + year;
-
 // Button click event
 const cards = document.querySelectorAll(".card");
+let remainTasks = cards.length;
+document.getElementById("task-remain").innerText = remainTasks;
+console.log(remainTasks);
 for (let i = 0; i < cards.length; i++) {
   const cardBtn = cards[i].querySelector(".card-btn");
   cardBtn.addEventListener("click", function () {
@@ -87,8 +89,6 @@ for (let i = 0; i < cards.length; i++) {
     }
     cardBtn.disabled = true;
     cardBtn.classList.add("bg-gray-300", "cursor-not-allowed");
-    const remainTask = document.getElementById("task-remain").innerText;
-    const remainTaskNum = parseInt(remainTask);
     const boardCount = document.getElementById("board-count").innerText;
     const boardCountNum = parseInt(boardCount);
     const cardTitle = cards[i].querySelector(".btn-title").innerText;
@@ -101,12 +101,14 @@ for (let i = 0; i < cards.length; i++) {
       .addEventListener("click", function () {
         div.classList.add("hidden");
       });
-    if (remainTaskNum > 0) {
+    if (remainTasks > 0) {
       alert("Board updated successfully");
-      document.getElementById("task-remain").innerText = remainTaskNum - 1;
+      remainTasks = remainTasks - 1;
+      document.getElementById("task-remain").innerText = remainTasks;
       document.getElementById("board-count").innerText = boardCountNum + 1;
       historySection.appendChild(div);
-      if (remainTaskNum === 1) {
+      console.log(remainTasks);
+      if (remainTasks === 0) {
         alert("congrates!!! You have completed all the current task");
       }
     }
