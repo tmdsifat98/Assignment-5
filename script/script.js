@@ -5,8 +5,10 @@ document
   .getElementById("theme-btn")
   .addEventListener("click", function (event) {
     rotation += 30;
-    document.getElementById("rotate-theme").style.transform = `rotate(${rotation}deg)`;
-    
+    document.getElementById(
+      "rotate-theme"
+    ).style.transform = `rotate(${rotation}deg)`;
+
     let themeChange = document.querySelectorAll(".bg-gray-200");
     const colorPallet = [
       "bg-red-300",
@@ -30,3 +32,30 @@ document
     }
     indexNum++;
   });
+
+// today update
+const todayDate = new Date();
+const toDay = todayDate.getDay();
+const shortDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+document.getElementById("dayName").innerText = shortDay[toDay] + " " + ",";
+
+// date update
+const nameOfMonth = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+const month = todayDate.getMonth();
+const day = todayDate.getDate();
+const year = todayDate.getFullYear();
+document.getElementById("day-month-year").innerText =
+  nameOfMonth[month] + " " + day + " " + year;
