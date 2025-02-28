@@ -1,45 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assignment 5</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#3752FD',
-          }
-        }
-      }
-    }
-  </script>
-</head>
-<body class="container mx-auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3752FD",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="container mx-auto bg-theme">
     <header>
-        <nav class="flex justify-between mt-2 bg-gray-200 py-2 px-3 rounded-xl">
-            <!-- logo part -->
-            <div class="flex items-center gap-2">
-                <img src="assets/logo.png" alt="">
-                <h2 class="text-2xl">Dev <span class="font-bold">Board</span></h2>
-            </div>
+      <nav class="flex justify-between mt-2 bg-gray-200 py-2 px-3 rounded-xl">
+        <!-- logo part -->
+        <div class="flex items-center gap-2">
+          <img src="assets/logo.png" alt="" />
+          <h2 class="text-2xl">Dev <span class="font-bold">Board</span></h2>
+        </div>
 
-            <!-- right checkbox and theme color btn -->
-            <div class="flex items-center justify-center gap-8">
-                <div class="flex items-center gap-2 bg-gray-300 px-5 py-3 rounded-3xl">
-                    <img src="assets/checkbox.png" alt="">
-                    <p class="font-bold text-2xl">23</p>
+        <!-- right checkbox and theme color btn -->
+        <div class="flex items-center justify-center gap-8">
+          <div
+            class="flex items-center gap-2 bg-gray-300 px-5 py-3 rounded-3xl"
+          >
+            <img src="assets/checkbox.png" alt="" />
+            <p class="font-bold text-2xl">23</p>
+          </div>
+          <!-- theme button -->
+          <div id="theme-btn" >
+            <img id="rotate-theme" src="assets/theme-btn.png" alt="" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- main section -->
+    <main>
+      <!-- main section container -->
+      <div class="flex mt-6 justify-center gap-6 p-6 rounded-xl">
+        <!-- left container div -->
+        <div>
+          <!-- top title section -->
+          <div class="flex  bg-white p-4 justify-around gap-6">
+            <!-- title left -->
+            <div class=" bg-theme flex gap-6 items-center py-5 px-4 justify-center rounded-xl bg-theme">
+              <div>
+                <img src="assets/checkbox.png" alt="" />
+              </div>
+              <div>
+                <p>Task Assigned</p>
+                <p>0</p>
+              </div>
+            </div>
+            <!-- title middle -->
+            <div style="background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%,rgb(108, 127, 250) 52.66%,rgb(155, 168, 248) 99.733%);" class=" flex bg-primary gap-6 items-center justify-center py-5 px-3 rounded-xl">
+              <img src="assets/board.png" alt="" />
+              <h2 class="text-3xl">Discover Something New Today!</h2>
+            </div>
+            <!-- title right -->
+            <div class="flex bg-theme gap-6 items-center py-5 px-4 justify-center rounded-xl bg-white">
+                <div>
+                  <img src="assets/calender.png" alt="" />
                 </div>
                 <div>
-                    <img src="assets/theme-btn.png" alt="">
+                  <p>Wed ,</p>
+                  <p>Jul 28 2025 </p>
                 </div>
-            </div>
-        </nav>
-    </header>
+              </div>
+          </div>
+        </div>
 
 
-  <script src="script/script.js"></script>
-</body>
+        <!-- activity log section -->
+       <section class="w-1/5 bg-white">
+        <div class="flex">
+            <img src="assets/activity.png" alt="">
+            <h3>Activity Log</h3>
+        </div>
+       </section>
+      </div>
+
+      
+    </main>
+
+    <script src="script/script.js"></script>
+  </body>
 </html>
