@@ -1,2 +1,3 @@
+const todayDate = new Date()
 
-console.log(nameOfMonth[month], day, year);
+console.log(hour, minute, second);
