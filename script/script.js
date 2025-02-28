@@ -8,8 +8,7 @@ document
     document.getElementById(
       "rotate-theme"
     ).style.transform = `rotate(${rotation}deg)`;
-
-    let themeChange = document.querySelectorAll(".bg-gray-100");
+    let themeChange = document.querySelectorAll(".theme-change");
     const colorPallet = [
       "bg-red-200",
       "bg-green-200",
@@ -34,7 +33,7 @@ document
   });
 
 // today update
-const todayDate = new Date();
+let todayDate = new Date();
 const toDay = todayDate.getDay();
 const shortDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 document.getElementById("dayName").innerText = shortDay[toDay] + " " + ",";
@@ -60,29 +59,34 @@ const year = todayDate.getFullYear();
 document.getElementById("day-month-year").innerText =
   nameOfMonth[month] + " " + day + " " + year;
 
-//   time update
-let hour = todayDate.getHours();
-const minute = todayDate.getMinutes();
-const second = todayDate.getSeconds();
-let format = "";
-if (hour >= 12) {
-  format = "PM";
-} else {
-  format = "AM";
-}
-hour = hour % 12;
-if (hour === 0) {
-  hour = 12;
-}
-if (minute < 10) {
-  minute = "0" + minute;
-}
-
 // Button click event
 const cards = document.querySelectorAll(".card");
 for (let i = 0; i < cards.length; i++) {
   const cardBtn = cards[i].querySelector(".card-btn");
   cardBtn.addEventListener("click", function () {
+    //   time update
+    let todayDate = new Date();
+    let hour = todayDate.getHours();
+    let minute = todayDate.getMinutes();
+    let second = todayDate.getSeconds();
+    let format = "";
+    if (hour >= 12) {
+      format = "PM";
+    } else {
+      format = "AM";
+    }
+    hour = hour % 12;
+    if (hour === 0) {
+      hour = 12;
+    }
+    if (minute < 10) {
+      minute = "0" + minute;
+    }
+    if (second < 10) {
+      second = "0" + second;
+    }
+    cardBtn.disabled = true;
+    cardBtn.classList.add("bg-gray-300", "cursor-not-allowed");
     const remainTask = document.getElementById("task-remain").innerText;
     const remainTaskNum = parseInt(remainTask);
     const boardCount = document.getElementById("board-count").innerText;
@@ -90,7 +94,7 @@ for (let i = 0; i < cards.length; i++) {
     const cardTitle = cards[i].querySelector(".btn-title").innerText;
     const historySection = document.getElementById("history-section");
     const div = document.createElement("div");
-    div.classList.add("bg-gray-200", "my-1", "mx-3", "p-3", "rounded-lg");
+    div.classList.add("bg-secondary", "my-1", "mx-3", "p-3", "rounded-lg");
     div.innerText = `You have Complete The Task ${cardTitle} at ${hour}:${minute}:${second} ${format}`;
     document
       .getElementById("history-btn")
@@ -102,6 +106,9 @@ for (let i = 0; i < cards.length; i++) {
       document.getElementById("task-remain").innerText = remainTaskNum - 1;
       document.getElementById("board-count").innerText = boardCountNum + 1;
       historySection.appendChild(div);
+      if (remainTaskNum === 1) {
+        alert("congrates!!! You have completed all the current task");
+      }
     }
   });
 }
