@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 5</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3752FD",
+              secondary: "#F4F7FF",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="container mx-auto theme-change bg-secondary">
+    <header>
+      <nav
+        class="flex justify-between font-poppins items-center mt-2 bg-white py-3 px-4 rounded-xl"
+      >
+        <!-- logo part -->
+        <div class="flex items-center gap-2">
+          <img src="assets/logo.png" alt="" />
+          <h2 class="text-2xl hidden md:flex">
+            Dev <span class="font-bold">Board</span>
+          </h2>
+        </div>
+
+        <!-- right back btn -->
+        <div>
+          <button
+            id="back-btn"
+            class="bg-primary px-5 py-2 rounded-lg text-white"
+          >
+            Back to desk
+          </button>
+        </div>
+      </nav>
+    </header>
+    <!-- main part -->
+    <main>
+      <h1 class="text-2xl font-poppins font-bold text-center mt-3">Blogs</h1>
+      <!-- question container -->
+      <div>
+        <!-- 1st question -->
+        <div class="bg-white font-poppins mt-4 py-3 px-6">
+          <p class="border-dashed border-b-2 my-2 py-3 font-semibold">
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </p>
+          <p class="">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
+            quaerat odio aspernatur culpa adipisci iusto quasi facilis iure rem
+            laborum distinctio quod eum molestias? Porro sequi aspernatur
+            doloribus accusantium cum eveniet iure ad, mollitia, corrupti
+            nostrum doloremque minima. Veritatis sapiente sed illo error labore
+            laudantium aut officiis incidunt pariatur hic.
+          </p>
+        </div>
+        <!-- 2nd question -->
+        <div class="bg-white font-poppins mt-4 py-3 px-6">
+          <p class="border-dashed border-b-2 my-2 py-3 font-semibold">
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?
+          </p>
+          <p class="">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
+            quaerat odio aspernatur culpa adipisci iusto quasi facilis iure rem
+            laborum distinctio quod eum molestias? Porro sequi aspernatur
+            doloribus accusantium cum eveniet iure ad, mollitia, corrupti
+            nostrum doloremque minima. Veritatis sapiente sed illo error labore
+            laudantium aut officiis incidunt pariatur hic.
+          </p>
+        </div>
+        <!-- 3rd question -->
+        <div class="bg-white font-poppins mt-4 py-3 px-6">
+          <p class="border-dashed border-b-2 my-2 py-3 font-semibold">
+            Question-3: What is event delegation in the DOM?
+          </p>
+          <p class="">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
+            quaerat odio aspernatur culpa adipisci iusto quasi facilis iure rem
+            laborum distinctio quod eum molestias? Porro sequi aspernatur
+            doloribus accusantium cum eveniet iure ad, mollitia, corrupti
+            nostrum doloremque minima. Veritatis sapiente sed illo error labore
+            laudantium aut officiis incidunt pariatur hic.
+          </p>
+        </div>
+        <!-- 4th question -->
+        <div class="bg-white font-poppins mt-4 py-3 px-6">
+          <p class="border-dashed border-b-2 my-2 py-3 font-semibold">
+            Question-4: What is event bubbling in the DOM?
+          </p>
+          <p class="">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
+            quaerat odio aspernatur culpa adipisci iusto quasi facilis iure rem
+            laborum distinctio quod eum molestias? Porro sequi aspernatur
+            doloribus accusantium cum eveniet iure ad, mollitia, corrupti
+            nostrum doloremque minima. Veritatis sapiente sed illo error labore
+            laudantium aut officiis incidunt pariatur hic.
+          </p>
+        </div>
+        <!-- 5th question -->
+        <div class="bg-white font-poppins mt-4 py-3 px-6">
+          <p class="border-dashed border-b-2 my-2 py-3 font-semibold">
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </p>
+          <p class="">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
+            quaerat odio aspernatur culpa adipisci iusto quasi facilis iure rem
+            laborum distinctio quod eum molestias? Porro sequi aspernatur
+            doloribus accusantium cum eveniet iure ad, mollitia, corrupti
+            nostrum doloremque minima. Veritatis sapiente sed illo error labore
+            laudantium aut officiis incidunt pariatur hic.
+          </p>
+        </div>
+      </div>
+    </main>
+    <script>
+      document
+        .getElementById("back-btn")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>

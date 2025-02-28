@@ -114,3 +114,8 @@ for (let i = 0; i < cards.length; i++) {
     }
   });
 }
+
+// blog page switch
+document.getElementById('middle-blog-title').addEventListener('click',function(){
+    window.location.href = 'blog.html'
+})
