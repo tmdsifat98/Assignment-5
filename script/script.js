@@ -1,6 +1,16 @@
 // here is the dynamic background colour change
 let indexNum = 0;
 let rotation = 0;
+const colorPallet = [
+  "red",
+  "green",
+  "purple",
+  "blue",
+  "violet",
+  "pink",
+  "orange",
+  "amber",
+];
 document
   .getElementById("theme-btn")
   .addEventListener("click", function (event) {
@@ -8,27 +18,15 @@ document
     document.getElementById(
       "rotate-theme"
     ).style.transform = `rotate(${rotation}deg)`;
-    let themeChange = document.querySelectorAll(".theme-change");
-    const colorPallet = [
-      "red",
-      "green",
-      "purple",
-      "blue",
-      "violet",
-      "pink",
-      "orange",
-      "amber",
-    ];
+    let themeChange = document.getElementById("theme-change");
     if (indexNum > colorPallet.length - 1) {
       indexNum = 0;
     }
     let newColor = colorPallet[indexNum];
-    for (let i = 0; i < themeChange.length; i++) {
-      for (let color of colorPallet) {
-        themeChange[i].classList.remove(color);
-      }
-      themeChange[i].classList.add(`bg-${newColor}-200`);
+    for (let color of colorPallet) {
+      themeChange.classList.remove(`bg-${color}-200`);
     }
+    themeChange.classList.add(`bg-${newColor}-200`);
     indexNum++;
   });
 
