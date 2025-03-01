@@ -10,16 +10,16 @@ document
     ).style.transform = `rotate(${rotation}deg)`;
     let themeChange = document.querySelectorAll(".theme-change");
     const colorPallet = [
-      "bg-red-200",
-      "bg-green-200",
-      "bg-purple-200",
-      "bg-blue-200",
-      "bg-violet-200",
-      "bg-pink-200",
-      "bg-orange-200",
-      "bg-amber-200",
+      "red",
+      "green",
+      "purple",
+      "blue",
+      "violet",
+      "pink",
+      "orange",
+      "amber",
     ];
-    if (indexNum > 7) {
+    if (indexNum > colorPallet.length - 1) {
       indexNum = 0;
     }
     let newColor = colorPallet[indexNum];
@@ -27,7 +27,7 @@ document
       for (let color of colorPallet) {
         themeChange[i].classList.remove(color);
       }
-      themeChange[i].classList.add(newColor);
+      themeChange[i].classList.add(`bg-${newColor}-200`);
     }
     indexNum++;
   });
@@ -107,7 +107,6 @@ for (let i = 0; i < cards.length; i++) {
       document.getElementById("task-remain").innerText = remainTasks;
       document.getElementById("board-count").innerText = boardCountNum + 1;
       historySection.appendChild(div);
-      console.log(remainTasks);
       if (remainTasks === 0) {
         alert("congrates!!! You have completed all the current task");
       }
@@ -116,6 +115,8 @@ for (let i = 0; i < cards.length; i++) {
 }
 
 // blog page switch
-document.getElementById('middle-blog-title').addEventListener('click',function(){
-    window.location.href = 'blog.html'
-})
+document
+  .getElementById("middle-blog-title")
+  .addEventListener("click", function () {
+    window.location.href = "blog.html";
+  });

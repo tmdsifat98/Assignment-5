@@ -64,75 +64,63 @@
       <div>
         <!-- 1st question -->
         <div class="bg-white font-poppins mt-4 py-3 px-6">
-          <p class="border-dashed border-b-2 my-2 py-3 font-semibold">
+          <p class="border-dashed border-b-2 my-2 text-lg pb-3 font-semibold">
             Question-1: What are the different ways to select an element in the
             DOM?
           </p>
           <p class="">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
-            quaerat odio aspernatur culpa adipisci iusto quasi facilis iure rem
-            laborum distinctio quod eum molestias? Porro sequi aspernatur
-            doloribus accusantium cum eveniet iure ad, mollitia, corrupti
-            nostrum doloremque minima. Veritatis sapiente sed illo error labore
-            laudantium aut officiis incidunt pariatur hic.
+            We can select element in DOM with some different ways. Here are, 1.
+            getElementById , 2. getElementsByClassname , 3.
+            getElementsByTagName, 4. querySelector and 5. querySelectorAll.
           </p>
         </div>
         <!-- 2nd question -->
         <div class="bg-white font-poppins mt-4 py-3 px-6">
-          <p class="border-dashed border-b-2 my-2 py-3 font-semibold">
+          <p class="border-dashed border-b-2 my-2 pb-3 text-lg font-semibold">
             Question-2: What is the difference between innerHTML, innerText, and
             textContent ?
           </p>
           <p class="">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
-            quaerat odio aspernatur culpa adipisci iusto quasi facilis iure rem
-            laborum distinctio quod eum molestias? Porro sequi aspernatur
-            doloribus accusantium cum eveniet iure ad, mollitia, corrupti
-            nostrum doloremque minima. Veritatis sapiente sed illo error labore
-            laudantium aut officiis incidunt pariatur hic.
+            Differences between innerHTML, innerText and textContent : 1.
+            innerHTML return whole set of html content within an element. 2.
+            innerText showes the visible text content of an element excluding
+            hidden elements. 3. textContent showes text set of an element
+            including hidden elements.
           </p>
         </div>
         <!-- 3rd question -->
         <div class="bg-white font-poppins mt-4 py-3 px-6">
-          <p class="border-dashed border-b-2 my-2 py-3 font-semibold">
+          <p class="border-dashed border-b-2 my-2 pb-3 text-lg font-semibold">
             Question-3: What is event delegation in the DOM?
           </p>
           <p class="">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
-            quaerat odio aspernatur culpa adipisci iusto quasi facilis iure rem
-            laborum distinctio quod eum molestias? Porro sequi aspernatur
-            doloribus accusantium cum eveniet iure ad, mollitia, corrupti
-            nostrum doloremque minima. Veritatis sapiente sed illo error labore
-            laudantium aut officiis incidunt pariatur hic.
+            Add an EventListener in parent element with event parameter we can
+            access all the element within the parent element by using
+            event.target(). It helps to prevent add multiple eventListener in
+            each element.
           </p>
         </div>
         <!-- 4th question -->
         <div class="bg-white font-poppins mt-4 py-3 px-6">
-          <p class="border-dashed border-b-2 my-2 py-3 font-semibold">
+          <p class="border-dashed border-b-2 my-2 pb-3 text-lg font-semibold">
             Question-4: What is event bubbling in the DOM?
           </p>
           <p class="">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
-            quaerat odio aspernatur culpa adipisci iusto quasi facilis iure rem
-            laborum distinctio quod eum molestias? Porro sequi aspernatur
-            doloribus accusantium cum eveniet iure ad, mollitia, corrupti
-            nostrum doloremque minima. Veritatis sapiente sed illo error labore
-            laudantium aut officiis incidunt pariatur hic.
+            When we add an event in a parent element it will be applicable in
+            child element too. Suppose we target a div element, the parent of
+            div is body will auto targeted, the parent of body element html tag
+            also targeted and document too. By using event.stopPropagation() ,
+            We can stop event bubbling.
           </p>
         </div>
         <!-- 5th question -->
         <div class="bg-white font-poppins mt-4 py-3 px-6">
-          <p class="border-dashed border-b-2 my-2 py-3 font-semibold">
+          <p class="border-dashed border-b-2 my-2 pb-3 text-lg font-semibold">
             Question-5: How do you create, add, and remove elements using
             JavaScript?
           </p>
           <p class="">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
-            quaerat odio aspernatur culpa adipisci iusto quasi facilis iure rem
-            laborum distinctio quod eum molestias? Porro sequi aspernatur
-            doloribus accusantium cum eveniet iure ad, mollitia, corrupti
-            nostrum doloremque minima. Veritatis sapiente sed illo error labore
-            laudantium aut officiis incidunt pariatur hic.
+            1.Create element: document.createElement('elementName').. 2.Add element: Suppose I have created a element div and I want to add it in section tag. I can add this through section.appendChild(div).. 3.Remove element: To remove a particular element firstly get it in a variable named elementName then use this formula parentElement.removeChild(elementName);
           </p>
         </div>
       </div>
