@@ -92,7 +92,7 @@ for (let i = 0; i < cards.length; i++) {
     const cardTitle = cards[i].querySelector(".btn-title").innerText;
     const historySection = document.getElementById("history-section");
     const div = document.createElement("div");
-    div.classList.add("bg-secondary", "my-1", "mx-3", "p-3", "rounded-lg");
+    div.classList.add("bg-secondary", "my-1", "mx-3", "py-3" ,"px-4", "rounded-lg");
     div.innerText = `You have Complete The Task ${cardTitle} at ${hour}:${minute}:${second} ${format}`;
     document
       .getElementById("history-btn")
